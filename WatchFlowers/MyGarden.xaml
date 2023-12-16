@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WatchFlowers.MainPage"
+             BackgroundColor="#1E1E1E">
+
+    <ScrollView>
+        <VerticalStackLayout x:Name="PlantsList">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="1.5*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.ColumnSpan="4" Grid.RowSpan="3" BackgroundColor="#DAEFF0"/>
+                
+                <Label Text="Грядка 1 на улице" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" Margin="5,10" FontSize="20"
+                       TextColor="#1E1E1E"/>
+                
+                <Label Text="Огурцы зернистые" Grid.Row="1" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" Margin="5,10, 5, 0" 
+                       FontSize="16" TextColor="#56B185"/>
+
+                <Image Source="gdrop" Grid.Row="2" VerticalOptions="Start" Margin="20,10"/>
+                <Image Source="gsun" Grid.Row="2" Grid.Column="1" VerticalOptions="Start" Margin="20,10"/>
+                <Image Source="gtemp" Grid.Row="2" Grid.Column="2" VerticalOptions="Start" Margin="20,10"/>
+
+                <Image Source="garden1" Grid.Column="3" Grid.RowSpan="3" VerticalOptions="Center"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -5,11 +5,25 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WatchFlowers"
     Shell.FlyoutBehavior="Disabled"
-    Title="WatchFlowers">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    Title="WatchFlowers"
+    BackgroundColor="White"
+    Shell.BackgroundColor="#56B185"
+    Shell.TabBarBackgroundColor="#56B185"
+    Shell.TabBarForegroundColor="Black"
+    Shell.TabBarTitleColor="Black">
+    
+    <TabBar>
+        <Tab Title="Растения" Icon="myplants">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
+        </Tab>
+        <Tab Title="Добавить" Icon="addplant">
+            <ShellContent ContentTemplate="{DataTemplate local:AddGarden}"/>
+        </Tab>
+        <Tab Title="Бестиарий" Icon="bestiary">
+            <ShellContent ContentTemplate="{DataTemplate local:Bestiary}"/>
+        </Tab>
+        <Tab Title="Настройки" Icon="settings">
+            <ShellContent ContentTemplate="{DataTemplate local:Settings}"/>
+        </Tab>
+    </TabBar>
 </Shell>

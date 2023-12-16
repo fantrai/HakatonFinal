@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WatchFlowers.AddGarden"
+             BackgroundColor="#1E1E1E">
+
+    <Grid Margin="10, 20" RowSpacing="10" BackgroundColor="#DAEFF0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout Spacing="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.ColumnSpan="2" BackgroundColor="Transparent" BorderColor="#56B185" BorderWidth="2" Margin="5"/>
+                <Image Source="addimage" Margin="0, 10,0,0"/>
+                <Label Text="Загрузите изображение грядки" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" 
+                   TextColor="#1E1E1E" Margin="10" FontSize="20"/>
+            </Grid>
+
+            <Border Stroke ="#56B185" Margin="5" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Entry x:Name="EntryNameGarden" Placeholder="Название*" TextChanged="InputNameGarden"/>
+            </Border>
+
+            <Border Stroke ="#56B185" Margin="5" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Entry x:Name="EntryDescriptionText" Placeholder="Описание"/>
+            </Border>
+
+            <Border Stroke ="#56B185" Margin="5" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Label x:Name="LabelWet" Text="Поддерживаемая влажность 50%" Margin="5" FontSize="16"/>
+                    <Slider x:Name="SliderWet" Value="0.5" ThumbColor="#56B185" MinimumTrackColor="#1E1E1E" 
+                            MaximumTrackColor="#1E1E1E" Margin="5" ValueChanged="UpdWet"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <Border Stroke ="#56B185" Margin="5" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Label x:Name="LabelLighting" Text="Поддерживаемое освещение 1ЛК" Margin="5" FontSize="16"/>
+                    <Slider x:Name="SliderLighting" Value="1" Maximum="10" ThumbColor="#56B185" MinimumTrackColor="#1E1E1E"
+                            MaximumTrackColor="#1E1E1E" Margin="5" ValueChanged="UpdLighting"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <Border Stroke ="#56B185" Margin="5" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Label x:Name="LabelTemp" Text="Поддерживаемая температура 0°" Margin="5" FontSize="16"/>
+                    <Slider x:Name="SliderTemp" Value="0" Maximum="50" ThumbColor="#56B185" MinimumTrackColor="#1E1E1E" 
+                            MaximumTrackColor="#1E1E1E" Margin="5" ValueChanged="UpdTemp"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <Border Stroke ="#56B185" Margin="5" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Label x:Name="LabelRateWater" Text="Периодичность полива 1 раз/неделю" Margin="5" FontSize="16"/>
+                    <Slider x:Name="SliderRateWater" Value="1" Maximum="14" ThumbColor="#56B185" MinimumTrackColor="#1E1E1E" 
+                            MaximumTrackColor="#1E1E1E" Margin="5" ValueChanged="UpdRateWater"/>
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+
+        <Button Grid.Row="1" Margin="5" BackgroundColor="#56B185" Text="Добавить грядку" TextColor="#1E1E1E" FontSize="20"
+                IsEnabled="False" x:Name="AddGardenBut" Clicked="CreateGarden"/>
+
+    </Grid>
+</ContentPage>
