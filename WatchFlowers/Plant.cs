@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
+using System.Text.Json.Serialization;
 
 namespace WatchFlowers
 {
     internal class Plant
     {
-        public Plant(string name, int prefWetAir,int prefLighting,int prefTemp, int rateWater, string desctription = "нет описания")
+        public Plant(string name, int prefWetAir,int prefLighting,int prefTemp, int rateWater, string desctription = "нет описания", string patchToImage = "")
         {
             Name = name;
             Description = desctription;
@@ -16,6 +13,7 @@ namespace WatchFlowers
             PrefLighting = prefLighting;
             PrefTemp = prefTemp;
             RateWater = rateWater;
+            PatchToImage = patchToImage;
             
             Random random = new Random();
 
@@ -34,6 +32,7 @@ namespace WatchFlowers
 
         public string Name;
         public string Description;
+        public string PatchToImage;
         public int PrefWetAir;
         public int PrefLighting;
         public int PrefTemp;

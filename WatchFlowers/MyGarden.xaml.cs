@@ -10,6 +10,7 @@ namespace WatchFlowers
         {
             InitializeComponent();
             page = this;
+            _AllPlants.Load();
             UpdatePan();
         }
 

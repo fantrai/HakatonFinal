@@ -69,6 +69,8 @@ public partial class AddGarden : ContentPage
 
         AddPan.IsVisible = false;
         SucsCreate.IsVisible = true;
+
+        _AllPlants.Save();
     }
 
     private void GoodBut(object sender, EventArgs e)

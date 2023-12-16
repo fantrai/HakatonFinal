@@ -3,4 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WatchFlowers.Bestiary"
              Background="#1E1E1E">
+
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout x:Name="PlantsList" IsVisible="true">
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Grid x:Name="InfoPan" BackgroundColor="#DAEFF0" Margin="10, 30" IsVisible="false">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+
+            <ImageButton Source="cross" Grid.Column="1" Margin="10" VerticalOptions="Center" Clicked="CloseInfo"/>
+
+            <Label x:Name="LName" Text="Картофель Гала" VerticalOptions="Center" HorizontalOptions="Center" FontSize="24" Grid.ColumnSpan="2"
+                   Margin="10" TextColor="#1E1E1E"/>
+            <Label x:Name="LDescription" Text="Традиционное блюдо русских крестьян" 
+                   VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" Grid.ColumnSpan="2" Grid.Row="1"
+                   Margin="10" HorizontalTextAlignment="Center" TextColor="#1E1E1E"/>
+            <Image x:Name="Ico" Source="potato" Grid.ColumnSpan="2" Grid.Row="2" Margin="10"/>
+
+            <Label Text="Рекомендуем:" VerticalOptions="End" HorizontalOptions="Center" FontSize="18" Grid.ColumnSpan="2" Grid.Row="3"
+                    Margin= "10" HorizontalTextAlignment="Center" TextColor="#496C50"/>
+
+            <Label x:Name="LWetSail" Text="Частота полива 1/неделю" HorizontalOptions="Start" Grid.Row="4" TextColor="#496C50" FontSize="16" 
+                   Margin="20, 10" VerticalOptions="Center"/>
+            <Image Source="gdrop" Grid.Column="1" Grid.Row="4" Margin="25, 10"/>
+            
+            <Label x:Name="LLighting" Text="Уровень освещения 2ЛК" HorizontalOptions="Start" Grid.Row="5" TextColor="#496C50" FontSize="16" 
+                   Margin="20, 10" VerticalOptions="Center"/>
+            <Image Source="gsun" Grid.Column="1" Grid.Row="5" Margin="25, 10"/>
+
+            <Label x:Name="LTemp" Text="Температура окружающей среды 23°" HorizontalOptions="Start" Grid.Row="6" TextColor="#496C50" 
+                   FontSize="16" Margin="20, 10" VerticalOptions="Center"/>
+            <Image Source="gtemp" Grid.Column="1" Grid.Row="6" Margin="25, 10"/>
+
+            <Label x:Name="LWetAir" Text="Влажность воздуха 65%" HorizontalOptions="Start" Grid.Row="7" TextColor="#496C50" 
+                   FontSize="16" Margin="20, 10" VerticalOptions="Center"/>
+        </Grid>
+    </Grid>
+    
 </ContentPage>
