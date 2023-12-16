@@ -8,6 +8,6 @@ namespace WatchFlowers
 {
     internal class _AllPlants
     {
-        public static List<_Plant> plants = new List<_Plant>();
+        public static List<Plant> plants = new List<Plant>();
     }
 }

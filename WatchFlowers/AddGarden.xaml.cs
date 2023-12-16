@@ -5,7 +5,16 @@ public partial class AddGarden : ContentPage
 	public AddGarden()
 	{
 		InitializeComponent();
+        SettingSliders();
 	}
+
+    void SettingSliders()
+    {
+        SliderRateWater.Maximum = 14;
+        SliderLighting.Maximum = Detectors.MaxLighting;
+        SliderTemp.Maximum = Detectors.MaxTemp;
+        SliderWet.Maximum = Detectors.MaxWetAir;
+    }
 
     private void InputNameGarden(object sender, TextChangedEventArgs e)
     {
@@ -17,8 +26,8 @@ public partial class AddGarden : ContentPage
     private void UpdWet(object sender, ValueChangedEventArgs e)
     {
 		Slider slider = (Slider)sender;
-		slider.Value = Math.Round(slider.Value, 1);
-		LabelWet.Text = "Поддерживаемая влажность " + (slider.Value * 100).ToString() + "%";
+		slider.Value = Math.Round(slider.Value, 0);
+		LabelWet.Text = "Поддерживаемая влажность " + (slider.Value).ToString() + "%";
     }
 
     private void UpdLighting(object sender, ValueChangedEventArgs e)
@@ -44,16 +53,27 @@ public partial class AddGarden : ContentPage
 
     private void CreateGarden(object sender, EventArgs e)
     {
-        _Plant plant = new _Plant
+        Plant plant = new Plant
         (
             EntryNameGarden.Text, 
-            (float)SliderWet.Value, 
-            (float)SliderLighting.Value, 
-            (float)SliderTemp.Value,
+            (int)SliderWet.Value, 
+            (int)SliderLighting.Value, 
+            (int)SliderTemp.Value,
             (int)SliderRateWater.Value, 
             EntryDescriptionText.Text
         );
-
         _AllPlants.plants.Add(plant);
+        MainPage.page.PrintPlant(plant);
+        EntryNameGarden.Text = "";
+        EntryDescriptionText.Text = "";
+
+        AddPan.IsVisible = false;
+        SucsCreate.IsVisible = true;
+    }
+
+    private void GoodBut(object sender, EventArgs e)
+    {
+        AddPan.IsVisible = true;
+        SucsCreate.IsVisible = false;
     }
 }

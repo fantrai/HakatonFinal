@@ -4,36 +4,71 @@
              x:Class="WatchFlowers.MainPage"
              BackgroundColor="#1E1E1E">
 
-    <ScrollView>
-        <VerticalStackLayout x:Name="PlantsList">
-            <Grid Margin="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
+    <Grid>
+        <Grid x:Name="NotFlowers" BackgroundColor="#DAEFF0" Margin="10, 30" MaximumHeightRequest="200" IsVisible="false">
+            <Label Text="Здесь появятся добавленные вами растения..." VerticalOptions="Center" HorizontalOptions="Center"
+                           TextColor="#1E1E1E" FontSize="20" VerticalTextAlignment="Center" Margin="30"/>
+        </Grid>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="1.5*"/>
-                </Grid.ColumnDefinitions>
+        <ScrollView>
+            <VerticalStackLayout x:Name="PlantsList" IsVisible="true">
+            </VerticalStackLayout>
+        </ScrollView>
+        
+        <Grid BackgroundColor="#DAEFF0" Margin="10, 30" x:Name="MoreInfoPan" IsVisible="false">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
-                <Button Grid.ColumnSpan="4" Grid.RowSpan="3" BackgroundColor="#DAEFF0"/>
-                
-                <Label Text="Грядка 1 на улице" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" Margin="5,10" FontSize="20"
-                       TextColor="#1E1E1E"/>
-                
-                <Label Text="Огурцы зернистые" Grid.Row="1" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" Margin="5,10, 5, 0" 
-                       FontSize="16" TextColor="#56B185"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
 
-                <Image Source="gdrop" Grid.Row="2" VerticalOptions="Start" Margin="20,10"/>
-                <Image Source="gsun" Grid.Row="2" Grid.Column="1" VerticalOptions="Start" Margin="20,10"/>
-                <Image Source="gtemp" Grid.Row="2" Grid.Column="2" VerticalOptions="Start" Margin="20,10"/>
+            <Border Grid.ColumnSpan="2" Grid.RowSpan="11" Stroke="#56B185" StrokeThickness="2"/>
 
-                <Image Source="garden1" Grid.Column="3" Grid.RowSpan="3" VerticalOptions="Center"/>
-            </Grid>
-        </VerticalStackLayout>
-    </ScrollView>
+            <Label x:Name="MLabelName" Text="Грядка 1" VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2" TextColor="#1E1E1E" FontSize="20"/>
+            <Label x:Name="MLabelDescription" Text="Огурцы зернистые" VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2" TextColor="#56B185"
+                       FontSize="16" Grid.Row="1"/>
+            <ImageButton Source="cross" Grid.Column="1" VerticalOptions="Start" HorizontalOptions="End" Margin="5" Clicked="CloseMoreInfo"/>
+            <Image Source="garden1" Grid.Row="2" Grid.ColumnSpan="2" Margin="10"/>
+
+            <Label x:Name="MLabelWetSoil" Text="Влажность почвы 70%" VerticalOptions="Center" HorizontalOptions="Start" TextColor="#496C50"
+                       FontSize="16" Grid.Row="3" Margin="20,0"/>
+            <Image x:Name="DropIco" Source="gdrop" Grid.Column="1" Grid.Row="3" Margin="5"/>
+            <Label x:Name="MDLWetSail" Text="Следующий полив через 3 дня" VerticalOptions="Start" HorizontalOptions="Start" Grid.ColumnSpan="2" TextColor="#56B185"
+                       FontSize="14" Grid.Row="4" Margin="40,0"/>
+
+
+            <Label x:Name="MLabelLighting" Text="Уровень освещения 2ЛК" VerticalOptions="Center" HorizontalOptions="Start" TextColor="#496C50"
+                       FontSize="16" Grid.Row="5" Margin="20,0"/>
+            <Image x:Name="SunIco" Source="rsun" Grid.Column="1" Grid.Row="5" Margin="5"/>
+            <Label x:Name="MDLLighting" Text="Необходимо добавить теплого света." VerticalOptions="Start" HorizontalOptions="Start" Grid.ColumnSpan="2" TextColor="#C66085"
+                       FontSize="14" Grid.Row="6" Margin="40,0"/>
+
+
+            <Label x:Name="MLabelTemp" Text="Температура окружающей среды 23°" VerticalOptions="Center" HorizontalOptions="Start" TextColor="#496C50"
+                       FontSize="16" Grid.Row="7" Margin="20,0"/>
+            <Image x:Name="TempIco" Source="gtemp" Grid.Column="1" Grid.Row="7" Margin="5"/>
+            <Label x:Name="MDLTemp" Text="В пределах нормы" VerticalOptions="Start" HorizontalOptions="Start" Grid.ColumnSpan="2" TextColor="#56B185"
+                       FontSize="14" Grid.Row="8" Margin="40,0"/>
+
+            <Label x:Name="MLabelWetAir" Text="Влажность воздуха 65%" VerticalOptions="Center" HorizontalOptions="Start" TextColor="#496C50"
+                       FontSize="16" Grid.Row="9" Margin="20,0"/>
+            <Label x:Name="MDLWetAir" Text="В пределах нормы" VerticalOptions="Start" HorizontalOptions="Start" Grid.ColumnSpan="2" TextColor="#56B185"
+                       FontSize="14" Grid.Row="10" Margin="40,0"/>
+
+        </Grid>
+    </Grid>
+
 </ContentPage>

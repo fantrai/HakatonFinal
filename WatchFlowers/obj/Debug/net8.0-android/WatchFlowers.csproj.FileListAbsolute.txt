@@ -1041,3 +1041,7 @@ C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Debug\net8.0-android
 C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Debug\net8.0-android\resizetizer\r\drawable\gsun.png
 C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Debug\net8.0-android\resizetizer\r\drawable\gtemp.png
 C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Debug\net8.0-android\resizetizer\r\drawable\garden1.png
+C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Debug\net8.0-android\resizetizer\r\drawable\rdrop.png
+C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Debug\net8.0-android\resizetizer\r\drawable\rsun.png
+C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Debug\net8.0-android\resizetizer\r\drawable\rtemp.png
+C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Debug\net8.0-android\resizetizer\r\drawable\cross.png

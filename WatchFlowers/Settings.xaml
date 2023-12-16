@@ -2,11 +2,58 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WatchFlowers.Settings"
-             Title="Settings">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             BackgroundColor="#1E1E1E">
+
+    <Grid BackgroundColor="#DAEFF0" Margin="10, 30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Text="Уведомления" HorizontalOptions="Center" VerticalOptions="Center" FontSize="22" TextColor="#1E1E1E"/>
+
+        <VerticalStackLayout Grid.Row="1" Margin="5" Spacing="5">
+            <Border Stroke="#56B185" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15" />
+                </Border.StrokeShape>
+                <Grid>
+                    <Label Text="Ошибки полива" Margin="10, 0" TextColor="#1E1E1E" FontSize="16" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+                    <Switch VerticalOptions="Center" Margin="5" OnColor="#56B185" ThumbColor="#C66085"/>
+                </Grid>
+            </Border>
+            
+            <Border Stroke="#56B185" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15" />
+                </Border.StrokeShape>
+                <Grid>
+                    <Label Text="Ошибки освещения" Margin="10, 0" TextColor="#1E1E1E" FontSize="16" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+                    <Switch VerticalOptions="Center" Margin="5" OnColor="#56B185" ThumbColor="#C66085"/>
+                </Grid>
+            </Border>
+            
+            <Border Stroke="#56B185" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15" />
+                </Border.StrokeShape>
+                <Grid>
+                    <Label Text="Ошибки температуры" Margin="10, 0" TextColor="#1E1E1E" FontSize="16" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+                    <Switch VerticalOptions="Center" Margin="5" OnColor="#56B185" ThumbColor="#C66085"/>
+                </Grid>
+            </Border>
+            
+            <Border Stroke="#56B185" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15" />
+                </Border.StrokeShape>
+                <Grid>
+                    <Label Text="Ошибки влажности воздуха" Margin="10, 0" TextColor="#1E1E1E" FontSize="16" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+                    <Switch VerticalOptions="Center" Margin="5" OnColor="#56B185" ThumbColor="#C66085"/>
+                </Grid>
+            </Border>
+        </VerticalStackLayout>
+        
+    </Grid>
+    
 </ContentPage>

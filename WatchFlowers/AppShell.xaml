@@ -19,7 +19,7 @@
         <Tab Title="Добавить" Icon="addplant">
             <ShellContent ContentTemplate="{DataTemplate local:AddGarden}"/>
         </Tab>
-        <Tab Title="Бестиарий" Icon="bestiary">
+        <Tab Title="Справочник" Icon="bestiary">
             <ShellContent ContentTemplate="{DataTemplate local:Bestiary}"/>
         </Tab>
         <Tab Title="Настройки" Icon="settings">
