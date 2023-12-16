@@ -119,22 +119,22 @@ namespace WatchFlowers
             Plant plant = _AllPlants.plants[num];
             MLabelName.Text = plant.Name;
             MLabelDescription.Text = plant.Description;
-            MLabelWetSoil.Text = "Влажность почвы " + plant.WetSoil;
+            MLabelWetSoil.Text = "Влажность почвы " + plant.WetSoil + "%";
             DropIco.Source = plant.WaterIsGood ? "gdrop" : "rdrop";
             MDLWetSail.Text = plant.WaterIsGood ? "Следующий полив " + (plant.NextWet == 0 ? "сегодня" : (plant.NextWet == 1 ? "сегодня" : "через " + plant.NextWet  + " дня")) : "Система полива требует вашего внимания!";
             MDLWetSail.TextColor = plant.WaterIsGood ? Color.FromArgb("#56B185") : Color.FromArgb("#C66085");
 
-            MLabelLighting.Text = "Уровень освещения " + plant.Lighting;
+            MLabelLighting.Text = "Уровень освещения " + plant.Lighting + "%";
             SunIco.Source = plant.SunIsGood ? "gsun" : "rsun";
             MDLLighting.Text = plant.SunIsGood ? "В пределах нормы" : "Система освещения требует вашего внимания!";
             MDLLighting.TextColor = plant.SunIsGood ? Color.FromArgb("#56B185") : Color.FromArgb("#C66085");
 
-            MLabelTemp.Text = "Температура окружающей среды " + plant.Temp;
+            MLabelTemp.Text = "Температура окружающей среды " + plant.Temp + "°";
             TempIco.Source = plant.TempIsGood ? "gtemp" : "rtemp";
             MDLTemp.Text = plant.TempIsGood ? "В пределах нормы" : "Система обогрева требует вашего внимания!";
             MDLTemp.TextColor = plant.TempIsGood ? Color.FromArgb("#56B185") : Color.FromArgb("#C66085");
 
-            MLabelWetAir.Text = "Влажность Воздуха " + plant.WetAir;
+            MLabelWetAir.Text = "Влажность Воздуха " + plant.WetAir + "%";
             MDLWetAir.Text = plant.WetAirIsGood ? "В пределах нормы" : "Система увлажнения требует вашего внимания!";
             MDLWetAir.TextColor = plant.WetAirIsGood ? Color.FromArgb("#56B185") : Color.FromArgb("#C66085");
 
