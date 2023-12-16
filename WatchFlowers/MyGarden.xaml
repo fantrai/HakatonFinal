@@ -28,6 +28,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -35,7 +36,7 @@
                 <ColumnDefinition Width="0.5*"/>
             </Grid.ColumnDefinitions>
 
-            <Border Grid.ColumnSpan="2" Grid.RowSpan="11" Stroke="#56B185" StrokeThickness="2"/>
+            <Border Grid.ColumnSpan="2" Grid.RowSpan="12" Stroke="#56B185" StrokeThickness="2"/>
 
             <Label x:Name="MLabelName" Text="Грядка 1" VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2" TextColor="#1E1E1E" FontSize="20"/>
             <Label x:Name="MLabelDescription" Text="Огурцы зернистые" VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2" TextColor="#56B185"
@@ -68,6 +69,8 @@
             <Label x:Name="MDLWetAir" Text="В пределах нормы" VerticalOptions="Start" HorizontalOptions="Start" Grid.ColumnSpan="2" TextColor="#56B185"
                        FontSize="14" Grid.Row="10" Margin="40,0"/>
 
+            <Button Grid.Row="11" Grid.ColumnSpan="2" CornerRadius="0" BackgroundColor="#C66085" BorderColor="#56B185"
+                    BorderWidth="2" Text="Удалить грядку" TextColor="#1E1E1E" FontSize="16" Clicked="DeluteGarden"/>
         </Grid>
     </Grid>
 

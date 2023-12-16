@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SQLite;
 using System.Text.Json;
 using System.IO;
 using System.Text.Json.Serialization;
@@ -13,11 +12,6 @@ namespace WatchFlowers
     internal class _AllPlants
     {
         public static string PathToData = Path.Combine(FileSystem.AppDataDirectory, "dataS");
-
-        public const SQLite.SQLiteOpenFlags Flags =
-        SQLite.SQLiteOpenFlags.ReadWrite |
-        SQLite.SQLiteOpenFlags.Create |
-        SQLite.SQLiteOpenFlags.SharedCache;
 
         public static List<Plant> plants = new List<Plant>();
 
@@ -30,11 +24,6 @@ namespace WatchFlowers
                 saveArr[i] = new SavePlant();
                 saveArr[i].Name = plants[i].Name;
                 saveArr[i].Description = plants[i].Description;
-            }
-            for (int i = 0; i < saveArr.Length; i++)
-            {
-                plants[i].Name = saveArr[i].Name;
-                plants[i].Description = saveArr[i].Description;
             }
 
             var serialize = JsonSerializer.Serialize(saveArr);

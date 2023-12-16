@@ -6,6 +6,8 @@ namespace WatchFlowers
         public static MainPage page;
         List<Grid> pans = new List<Grid>();
 
+        int numMoreBut = -1;
+
         public MainPage()
         {
             InitializeComponent();
@@ -18,6 +20,7 @@ namespace WatchFlowers
         {
             if (pans.Count == 0) NotFlowers.IsVisible = true;
             PlantsList.Children.Clear();
+            pans.Clear();
             for (int i = 0; i < _AllPlants.plants.Count; i++)
             {
                 Plant plant = _AllPlants.plants[i];
@@ -118,6 +121,8 @@ namespace WatchFlowers
             Grid cart = (Grid)((Button)sender).Parent;
             int num = pans.IndexOf(cart);
             Plant plant = _AllPlants.plants[num];
+            numMoreBut = num;
+
             MLabelName.Text = plant.Name;
             MLabelDescription.Text = plant.Description;
             MLabelWetSoil.Text = "Влажность почвы " + plant.WetSoil + "%";
@@ -151,8 +156,23 @@ namespace WatchFlowers
 
         private void CloseMoreInfo(object sender, EventArgs e)
         {
+            numMoreBut = -1;
             PlantsList.IsVisible = true;
             MoreInfoPan.IsVisible = false;
+        }
+
+        private void DeluteGarden(object sender, EventArgs e)
+        {
+            if (numMoreBut != -1) 
+            { 
+                _AllPlants.plants.RemoveAt(numMoreBut);
+                pans.RemoveAt(numMoreBut);
+                _AllPlants.Save();
+                UpdatePan();
+            }
+            PlantsList.IsVisible = true;
+            MoreInfoPan.IsVisible = false;
+
         }
     }
 }

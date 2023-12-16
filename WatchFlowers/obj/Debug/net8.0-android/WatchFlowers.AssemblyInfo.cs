@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WatchFlowers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+722a58d2d9fdcac82a1dd70c7075eb73214a050c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+9d97296907dd8bc94ec41de164d0d50c73933470")]
 [assembly: System.Reflection.AssemblyProductAttribute("WatchFlowers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WatchFlowers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
