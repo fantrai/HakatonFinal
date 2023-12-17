@@ -1047,3 +1047,5 @@ C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Debug\net8.0-android
 C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Debug\net8.0-android\lp\153\jl\files.cache
 C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Debug\net8.0-android\lp\154\jl\files.cache
 C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Debug\net8.0-android\android\assets\System.Private.CoreLib.dll
+C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Debug\net8.0-android\resizetizer\f\OpenSans-Regular (2).ttf
+C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Debug\net8.0-android\resizetizer\f\UbuntuCondensed-Regular.ttf

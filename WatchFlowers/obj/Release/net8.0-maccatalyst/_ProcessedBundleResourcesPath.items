@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\rsun.png" />
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\garden1.png" />
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\rtemp.png" />
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\bestiary.png" />
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\settings.png" />
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\cross.png" />
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\myplants.png" />
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\addimage.png" />
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\potato.png" />
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\rdrop.png" />
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\gtemp.png" />
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\gdrop.png" />
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\gsun.png" />
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\lavr.png" />
+    <BundleResource Include="C:\Users\fantrai\Desktop\MAUI\HakatonFinal\WatchFlowers\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\addplant.png" />
+    <BundleResource Include="obj\Release\net8.0-maccatalyst\resizetizer\f\OpenSans-Regular.ttf" />
+    <BundleResource Include="obj\Release\net8.0-maccatalyst\resizetizer\f\OpenSans-Semibold.ttf" />
+  </ItemGroup>
+</Project>
