@@ -5,11 +5,18 @@
              BackgroundColor="#1E1E1E">
 
     <Grid>
-        <Grid x:Name="AddPan" Margin="10, 20" RowSpacing="10" BackgroundColor="#DAEFF0" IsVisible ="true">
+        <Grid x:Name="AddPan" Margin="10, 20" RowSpacing="10" IsVisible ="true">
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
+
+            <Border BackgroundColor="#DAEFF0" Grid.RowSpan="2" Stroke="#56B185" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+            </Border>
 
             <VerticalStackLayout Spacing="0">
                 <Grid>
@@ -93,17 +100,23 @@
 
         </Grid>
         
-        <Grid x:Name="SucsCreate"  BackgroundColor="#DAEFF0" IsVisible="false" VerticalOptions="Center" Margin="10">
+        <Grid x:Name="SucsCreate" IsVisible="false" VerticalOptions="Center" Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
+            <Border BackgroundColor="#DAEFF0" Grid.RowSpan="3" Stroke="#56B185" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+            </Border>
+
             <Label Text="Растение добавлено!" VerticalOptions="Center" HorizontalOptions="Center" TextColor="#1E1E1E"
                    FontSize="22" Margin="10"/>
 
-            <Label Text="Новое растение добавлено! Список всех растений вы можете увидеть во вкладке Растения. Посетите бестиарий - там собраны советы по уходу" 
+            <Label Text="Новое растение добавлено! Список всех растений вы можете увидеть во вкладке Растения. Посетите справочник - там собраны советы по уходу" 
                    VerticalOptions="Center" HorizontalOptions="Center" TextColor="#1E1E1E" Margin="10, 20"
                    FontSize="16" Grid.Row="1" LineBreakMode="WordWrap" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
 

@@ -67,6 +67,11 @@ public partial class AddGarden : ContentPage
         EntryNameGarden.Text = "";
         EntryDescriptionText.Text = "";
 
+        SliderRateWater.Value = default;
+        SliderLighting.Value = default;
+        SliderTemp.Value = default;
+        SliderWet.Value = default;
+
         AddPan.IsVisible = false;
         SucsCreate.IsVisible = true;
 

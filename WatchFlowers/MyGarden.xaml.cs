@@ -56,6 +56,8 @@ namespace WatchFlowers
             Button moreInfoBut = new Button()
             {
                 BackgroundColor = Color.FromArgb("#DAEFF0"),
+                BorderColor = Color.FromArgb("#56B185"),
+                BorderWidth = 2,
             };
             moreInfoBut.Clicked += MoreInfo;
             Adder(moreInfoBut, plantCart, 0, 0, 3, 4);
@@ -161,6 +163,8 @@ namespace WatchFlowers
             MoreInfoPan.IsVisible = false;
         }
 
+
+
         private void DeluteGarden(object sender, EventArgs e)
         {
             if (numMoreBut != -1) 
@@ -172,7 +176,19 @@ namespace WatchFlowers
             }
             PlantsList.IsVisible = true;
             MoreInfoPan.IsVisible = false;
+            VeryfyPan.IsVisible = false;
+        }
 
+        private void VeryfyDel(object sender, EventArgs e)
+        {
+            VeryfyPan.IsVisible = true;
+            MoreInfoPan.IsVisible = false;
+        }
+
+        private void Undo(object sender, EventArgs e)
+        {
+            VeryfyPan.IsVisible = false;
+            MoreInfoPan.IsVisible = true;
         }
     }
 }

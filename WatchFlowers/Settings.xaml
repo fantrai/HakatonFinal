@@ -4,11 +4,17 @@
              x:Class="WatchFlowers.Settings"
              BackgroundColor="#1E1E1E">
 
-    <Grid BackgroundColor="#DAEFF0" Margin="10, 30">
+    <Grid Margin="10, 30">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.1*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+
+        <Border BackgroundColor="#DAEFF0" Grid.RowSpan="8" Stroke="#56B185" StrokeThickness="2" Grid.ColumnSpan="2">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+        </Border>
 
         <Label Text="Уведомления" HorizontalOptions="Center" VerticalOptions="Center" FontSize="22" TextColor="#1E1E1E"/>
 

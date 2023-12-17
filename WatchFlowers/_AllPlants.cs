@@ -23,7 +23,13 @@ namespace WatchFlowers
             {
                 saveArr[i] = new SavePlant();
                 saveArr[i].Name = plants[i].Name;
+                saveArr[i].PrefWetAir = plants[i].PrefWetAir;
+                saveArr[i].PrefLighting = plants[i].PrefLighting;
+                saveArr[i].PrefTemp = plants[i].PrefTemp;
+                saveArr[i].RateWater = plants[i].RateWater;
                 saveArr[i].Description = plants[i].Description;
+                saveArr[i].NextWet = plants[i].NextWet;
+                saveArr[i].PatchToImage = plants[i].PatchToImage;
             }
 
             var serialize = JsonSerializer.Serialize(saveArr);
@@ -38,7 +44,8 @@ namespace WatchFlowers
                 SavePlant[] saves = JsonSerializer.Deserialize<SavePlant[]>(data);
                 for (int i = 0; i < saves.Length; i++)
                 {
-                    plants.Add(new Plant(saves[i].Name, 0, 0, 0, 0, saves[i].Description));
+                    var plant = saves[i];
+                    plants.Add(new Plant(plant.Name, plant.PrefWetAir, plant.PrefLighting, plant.PrefTemp, plant.RateWater, plant.Description, plant.PatchToImage) { NextWet = plant.NextWet });
                 }
             }
         }
@@ -47,8 +54,20 @@ namespace WatchFlowers
     class SavePlant()
     {
         [JsonInclude]
-        public string Name = "a";
+        public string Name = "";
         [JsonInclude]
-        public string Description = "ahahahaha";
+        public string Description = "";
+        [JsonInclude]
+        public string PatchToImage = "";
+        [JsonInclude]
+        public int PrefWetAir;
+        [JsonInclude]
+        public int PrefLighting;
+        [JsonInclude]
+        public int PrefTemp;
+        [JsonInclude]
+        public int RateWater;
+        [JsonInclude]
+        public int NextWet;
     }
 }

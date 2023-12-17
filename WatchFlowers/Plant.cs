@@ -22,7 +22,7 @@ namespace WatchFlowers
             Temp = Detectors.Temp;
             WetAir = Detectors.WetAir;
 
-            NextWet = random.Next(0, RateWater);
+            NextWet = random.Next(0, rateWater);
             WaterIsGood = random.Next(0, 10) != 0;
 
             SunIsGood = Lighting <= prefLighting + Detectors.MaxLighting * 0.1f && Lighting >= prefLighting - Detectors.MaxLighting * 0.1f ? true : false;

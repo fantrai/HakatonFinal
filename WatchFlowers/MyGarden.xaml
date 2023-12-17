@@ -5,17 +5,22 @@
              BackgroundColor="#1E1E1E">
 
     <Grid>
-        <Grid x:Name="NotFlowers" BackgroundColor="#DAEFF0" Margin="10, 30" MaximumHeightRequest="200" IsVisible="false">
-            <Label Text="Здесь появятся добавленные вами растения..." VerticalOptions="Center" HorizontalOptions="Center"
+        <Grid x:Name="NotFlowers" Margin="10, 30" MaximumHeightRequest="200" IsVisible="false">
+            <Border BackgroundColor="#DAEFF0" Stroke="#56B185">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <Label Text="Здесь появятся добавленные вами растения..." VerticalOptions="Center" HorizontalOptions="Center"
                            TextColor="#1E1E1E" FontSize="20" VerticalTextAlignment="Center" Margin="30"/>
+            </Border>
         </Grid>
 
         <ScrollView>
             <VerticalStackLayout x:Name="PlantsList" IsVisible="true">
             </VerticalStackLayout>
         </ScrollView>
-        
-        <Grid BackgroundColor="#DAEFF0" Margin="10, 30" x:Name="MoreInfoPan" IsVisible="false">
+
+        <Grid Margin="10, 30" x:Name="MoreInfoPan" IsVisible="false">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -36,7 +41,11 @@
                 <ColumnDefinition Width="0.5*"/>
             </Grid.ColumnDefinitions>
 
-            <Border Grid.ColumnSpan="2" Grid.RowSpan="12" Stroke="#56B185" StrokeThickness="2"/>
+            <Border BackgroundColor="#DAEFF0" Grid.RowSpan="14" Grid.ColumnSpan="2" Stroke="#56B185" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+            </Border>
 
             <Label x:Name="MLabelName" Text="Грядка 1" VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2" TextColor="#1E1E1E" FontSize="20"/>
             <Label x:Name="MLabelDescription" Text="Огурцы зернистые" VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2" TextColor="#56B185"
@@ -69,8 +78,37 @@
             <Label x:Name="MDLWetAir" Text="В пределах нормы" VerticalOptions="Start" HorizontalOptions="Start" Grid.ColumnSpan="2" TextColor="#56B185"
                        FontSize="14" Grid.Row="10" Margin="40,0"/>
 
-            <Button Grid.Row="11" Grid.ColumnSpan="2" CornerRadius="0" BackgroundColor="#C66085" BorderColor="#56B185"
-                    BorderWidth="2" Text="Удалить грядку" TextColor="#1E1E1E" FontSize="16" Clicked="DeluteGarden"/>
+            <Button Grid.Row="11" Grid.ColumnSpan="2" CornerRadius="0" BackgroundColor="#C66085"
+                    Text="Удалить грядку" TextColor="#1E1E1E" FontSize="16" Clicked="VeryfyDel" Margin="10"/>
+        </Grid>
+
+        <Grid VerticalOptions="Center" Margin="10" x:Name="VeryfyPan" IsVisible="false">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Border BackgroundColor="#DAEFF0" Grid.RowSpan="14" Grid.ColumnSpan="2" Stroke="#56B185" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+            </Border>
+
+            <Label Text="Вы уверены?" VerticalOptions="Center" HorizontalOptions="Center" TextColor="#C66085" FontSize="22" Grid.ColumnSpan="2"
+                   Margin="10"/>
+            <Label Text="Удаленное растение больше не будет отслеживаться системой. Данное действие нельзя будет отменить" 
+                   VerticalOptions="Center" HorizontalOptions="Center" TextColor="#1E1E1E" FontSize="16" Grid.Row="1" Grid.ColumnSpan="2"
+                   HorizontalTextAlignment="Center" Margin="10"/>
+
+            <Button Grid.Row="2" Margin="10" BackgroundColor="#C66085" Text="Удалить" TextColor="#1E1E1E" Clicked="DeluteGarden"/>
+            <Button Grid.Row="2" Grid.Column="1" Margin="10" BackgroundColor="#56B185" Text="Отмена" TextColor="#1E1E1E" Clicked="Undo"/>
+
         </Grid>
     </Grid>
 

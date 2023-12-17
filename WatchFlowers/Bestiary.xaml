@@ -10,7 +10,7 @@
             </VerticalStackLayout>
         </ScrollView>
 
-        <Grid x:Name="InfoPan" BackgroundColor="#DAEFF0" Margin="10, 30" IsVisible="false">
+        <Grid x:Name="InfoPan" Margin="10, 30" IsVisible="false">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
@@ -26,6 +26,12 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="0.3*"/>
             </Grid.ColumnDefinitions>
+
+            <Border BackgroundColor="#DAEFF0" Grid.RowSpan="8" Stroke="#56B185" StrokeThickness="2" Grid.ColumnSpan="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+            </Border>
 
             <ImageButton Source="cross" Grid.Column="1" Margin="10" VerticalOptions="Center" Clicked="CloseInfo"/>
 
